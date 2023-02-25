@@ -1,6 +1,10 @@
 import requests
 from dataEntry import DataEntry
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+AUTHORIZATION = os.getenv('AUTHORIZATION')
 
 def main():
 
@@ -20,7 +24,7 @@ def main():
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "Authorization": "a_TcMxJPBG6QwND7OhvjmMwk2OCxpKoPZJqQE3flfOS9J1CVFbhxQgeq3ggc1hI53bajCEGxUJQ7E7EjEG"
+        "Authorization": AUTHORIZATION
     }
 
     response = requests.post(url, json=payload, headers=headers, timeout=30)
