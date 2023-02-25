@@ -21,7 +21,10 @@ def main():
         "accept": "application/json",
         "content-type": "application/json",
         "Authorization": "a_TcMxJPBG6QwND7OhvjmMwk2OCxpKoPZJqQE3flfOS9J1CVFbhxQgeq3ggc1hI53bajCEGxUJQ7E7EjEG"
-    }
+    } '''Note:
+Test script.
+Consents to the disclosure of sensitive data.
+Correction as soon as possible!'''
 
     response = requests.post(url, json=payload, headers=headers, timeout=30)
 
